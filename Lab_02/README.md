@@ -1,25 +1,25 @@
 # 🧪 Lab 02: Training a Custom Model
 
 ## 📖 Overview
-[cite_start]This lab focuses on the PyTorch workflow for building and training a custom neural network[cite: 472, 474]. [cite_start]You will learn how to define a model architecture, select appropriate loss functions and optimizers, and write full training and testing loops[cite: 486, 487, 593, 608].
+This lab covers the essential workflow for training deep learning models using PyTorch. The session transitions from basic tensor operations to constructing, training, and evaluating fully functional neural networks from scratch.
 
 ## 🧠 Key Concepts Covered
 
-* [cite_start]**PyTorch Workflow:** The end-to-end process includes getting data ready, building a model, fitting it to the data, evaluating performance, improving through experimentation, and saving the results[cite: 479, 480, 481, 482, 483, 484].
-* [cite_start]**Device Management:** Using `torch.cuda.is_available()` to seamlessly move models and data to hardware accelerators like GPUs for faster training[cite: 489, 490].
-* **Defining the Model (`torch.nn.Module`):** The foundational blueprint for neural networks. [cite_start]We cover subclassing `nn.Module`, initializing layers within `__init__`, and implementing the forward pass operations in the `forward` method[cite: 495, 496, 504, 505].
-* [cite_start]**Loss Functions:** Determining model performance by comparing prediction outputs to target values using functions like `nn.MSELoss` (for regression) or `nn.CrossEntropyLoss` (for classification)[cite: 556, 567, 568].
-* [cite_start]**Optimizers & Autograd:** Using optimizers like `torch.optim.SGD` to adjust internal parameters to lower the loss[cite: 573, 575]. [cite_start]This leverages PyTorch's Autograd package for automatic differentiation (`loss.backward()`), updating parameters (`optimizer.step()`), and resetting gradients (`optimizer.zero_grad()`)[cite: 578, 580, 581, 586].
-* [cite_start]**Saving and Loading Weights:** Persisting learned parameters using the model's internal state dictionary (`state_dict`), `torch.save()`, and `load_state_dict()`[cite: 639, 640, 642, 643].
+* **The PyTorch Workflow:** Understanding the end-to-end machine learning pipeline, from preparing data and building architectures to evaluating results and saving the finished model.
+* **Hardware Acceleration:** Managing devices efficiently by checking for GPU availability (CUDA) and transferring tensors and models to the appropriate hardware for faster computation.
+* **Network Architecture (`torch.nn.Module`):** The standard methodology for creating custom neural networks. This involves subclassing the base module, defining individual layers within the initialization function, and scripting the forward propagation logic.
+* **Loss Functions:** Measuring model error by comparing network predictions against actual target labels using standard mathematical functions, such as Cross-Entropy for classification tasks.
+* **Optimization & Backpropagation:** Utilizing gradient descent algorithms (like SGD) to minimize the loss. This covers the critical steps of clearing previous gradients, calculating new gradients via backpropagation, and stepping the optimizer to update network weights.
+* **Model Persistence:** Best practices for saving and loading trained network parameters using PyTorch state dictionaries.
 
 ## 💻 Exercises and Notebooks
 
-[cite_start]The practical component tasks you with implementing a complete neural network pipeline from scratch[cite: 648]. 
+The practical component requires you to bring all these concepts together to build a complete classification pipeline.
 
-* [cite_start]**TinyImageNet Classification:** Build a custom neural network to classify images from the TinyImageNet dataset[cite: 649, 652].
-* [cite_start]**Custom Loops:** Implement the full PyTorch training loop and test loop[cite: 653].
-* [cite_start]**Evaluation:** Track the loss and evaluate the final training and test accuracy achieved by your custom network[cite: 655, 656].
+* **Custom Architecture:** Design a neural network tailored for image classification.
+* **Training & Testing Loops:** Write the core iteration loops that handle batch processing, forward passes, loss calculation, and weight updates.
+* **TinyImageNet Application:** Train your custom model on the TinyImageNet dataset and evaluate its final accuracy on unseen test data.
 
 ## 🚀 Running the Code
 
-Open the Colab notebook provided in this folder. Make sure to change your runtime to GPU (Runtime > Change runtime type > T4 GPU) to take advantage of PyTorch's CUDA acceleration during the training loop.
+Open the Colab notebook provided in this folder. To ensure the training loop runs efficiently, remember to enable hardware acceleration (Runtime > Change runtime type > T4 GPU) before executing the cells.
