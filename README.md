@@ -18,7 +18,7 @@ Click on the links below to dive into the specific materials, datasets, and code
 | Session | Topic | Status | Link |
 | :---: | :--- | :---: | :--- |
 | **Lab 01** | PyTorch Basics, Tensors, Datasets, and DataLoaders | 🟢 **Available** | [👉 Go to Lab 01](./Lab_01) |
-| **Lab 02** | Training your model | ⏳ *Coming Soon* | *Link coming soon* |
+| **Lab 02** | Training a Custom Model (Loss, Optimizers, Training Loops) | 🟢 **Available** | [👉 Go to Lab 02](./Lab_02) |
 | **Lab 03** | Setting up a complete training pipeline | ⏳ *Coming Soon* | *Link coming soon* |
 | **Lab 04** | Standard CNNs (AlexNet/ResNet), Transfer Learning & Wandb | ⏳ *Coming Soon* | *Link coming soon* |
 
